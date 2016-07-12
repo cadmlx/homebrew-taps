@@ -62,13 +62,9 @@ class Pulseaudio < Formula
       --disable-dependency-tracking
       --disable-silent-rules
       --prefix=#{prefix}
-      --enable-coreaudio-output
       --disable-neon-opt
-      --with-mac-sysroot=/
     ]
 
-    args << "--with-mac-sysroot=#{MacOS.sdk_path}"
-    args << "--with-mac-version-min=#{MacOS.version}"
     args << "--disable-nls" if build.without? "nls"
 
     if build.universal?
