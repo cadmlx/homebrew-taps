@@ -34,6 +34,7 @@ class Pulseaudio < Formula
   depends_on "libsndfile"
   depends_on "libsoxr"
   depends_on "openssl"
+  depends_on "libpcap"
 
   depends_on :x11 => :optional
   depends_on "glib" => :optional
